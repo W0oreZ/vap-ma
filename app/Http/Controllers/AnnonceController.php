@@ -64,6 +64,7 @@ class AnnonceController extends Controller
      */
     public function show(Annonce $annonce)
     {
+        /**changing it later */
         $annonces = Annonce::where('title','like','%a%')->take(4)->get();
         return view('annonce.show')->withAnnonce($annonce)->withAnnonces($annonces);
     }
